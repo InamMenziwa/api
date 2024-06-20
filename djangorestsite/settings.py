@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'djangorestsite.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres:postgres@localhost:5432/djangorestsite',
+        default='postgres://mysite:PaJYdi1YCSxHBgECj0LQzg4X67LmOwyH@dpg-cpoqfs2ju9rs738ua09g-a/mysite_8tj1',
         conn_max_age=600
     )
 }
