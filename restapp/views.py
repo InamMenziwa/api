@@ -11,7 +11,7 @@ class Blogcreation(generics.ListCreateAPIView):
     serializer_class = Blogserializer
 
 def Homepage(request):
-    response = requests.get('http://127.0.0.1:8000/api/data/')
+    response = requests.get('https://mysite-8o30.onrender.com/api/data/')
     data = response.json() 
     return render(request, 'restapp/index.html', {"data": data})
     
