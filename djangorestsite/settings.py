@@ -79,11 +79,20 @@ WSGI_APPLICATION = 'djangorestsite.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgres://mysite:PaJYdi1YCSxHBgECj0LQzg4X67LmOwyH@dpg-cpoqfs2ju9rs738ua09g-a/mysite_8tj1',
-        conn_max_age=600
-    )
+    # 'default': dj_database_url.config(
+    #     default='postgres://mysite:PaJYdi1YCSxHBgECj0LQzg4X67LmOwyH@dpg-cpoqfs2ju9rs738ua09g-a/mysite_8tj1',
+    #     conn_max_age=600
+    # )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'jelly004',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
+
 
 
 # Password validation
