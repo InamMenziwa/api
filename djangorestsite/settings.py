@@ -80,18 +80,23 @@ WSGI_APPLICATION = 'djangorestsite.wsgi.application'
 
 DATABASES = {
     # 'default': dj_database_url.config(
-    #     default='postgres://mysite:PaJYdi1YCSxHBgECj0LQzg4X67LmOwyH@dpg-cpoqfs2ju9rs738ua09g-a/mysite_8tj1',
+    #     default='postgresql://mysite:PaJYdi1YCSxHBgECj0LQzg4X67LmOwyH@dpg-cpoqfs2ju9rs738ua09g-a.oregon-postgres.render.com/mysite_8tj1',
     #     conn_max_age=600
     # )
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'jelly004',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL', 'postgresql://postgres_cnr4_user:53x2I6bRlZVFKOL6Czrkdw4ONn6mktFL@dpg-cq80d45ds78s73dfkhag-a.oregon-postgres.render.com/postgres_cnr4'),
+        conn_max_age=600
+    )
 }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'postgres',
+    #     'USER': 'postgres',
+    #     'PASSWORD': 'jelly004',
+    #     'HOST': 'localhost',
+    #     'PORT': '5432',
+    # }
+
 
 
 
