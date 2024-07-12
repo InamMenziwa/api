@@ -84,7 +84,7 @@ DATABASES = {
     #     conn_max_age=600
     # )
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgresql://postgres_cnr4_user:53x2I6bRlZVFKOL6Czrkdw4ONn6mktFL@dpg-cq80d45ds78s73dfkhag-a.oregon-postgres.render.com/postgres_cnr4'),
+        default=os.getenv('DATABASE_URL', 'postgresql://postgres_cnr4_user:53x2I6bRlZVFKOL6Czrkdw4ONn6mktFL@dpg-cq80d45ds78s73dfkhag-a/postgres_cnr4'),
         conn_max_age=600
     )
 }
