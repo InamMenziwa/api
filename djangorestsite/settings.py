@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'djangorestsite.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://postgres_cnr4_user:53x2I6bRlZVFKOL6Czrkdw4ONn6mktFL@dpg-cq80d45ds78s73dfkhag-a/postgres_cnr4',
+        default='postgresql://psql_mufj_user:OghiLZOcQVHUcayV8xkErngSOYO5p7ZX@dpg-cqb75bij1k6c73amrgl0-a/psql_mufj',
         conn_max_age=600
     )
 }
@@ -142,3 +142,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
     
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

@@ -1,8 +1,8 @@
 databases:
-  - name: mysitedb
+  - name: psql
     plan: free
-    databaseName: mysite
-    user: mysite
+    databaseName: psql_mufj
+    user: psql_mufj_user
 
 services:
   - type: web
